@@ -1,4 +1,7 @@
 .mai-post-preview {
+	--heading-margin-bottom: var(--spacing-sm);
+	--h2-font-size: var(--font-size-lg);
+	--h3-font-size: var(--font-size-lg);
 	position: relative;
 	display: grid;
 	grid-template-columns: 1fr 2fr;
@@ -42,14 +45,9 @@
 }
 
 .mai-post-preview-domain {
-	margin-bottom: var(--spacing-xxs);
-	font-size:var(--font-size-xs);
+	--paragraph-margin-bottom: var(--spacing-xxs);
+	font-size: var(--font-size-xs);
 	text-transform: uppercase;
-}
-
-.mai-post-preview-title {
-	margin-bottom: var(--spacing-sm);
-	font-size: var(--font-size-lg);
 }
 
 .mai-post-preview-desc {

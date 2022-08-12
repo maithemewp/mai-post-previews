@@ -73,7 +73,7 @@ class Mai_Post_Preview {
 
 			$html .= '<div class="mai-post-preview-inner">';
 				$html .= sprintf( '<p class="mai-post-preview-domain">%s</p>', esc_html( ltrim( $data['host'], 'www.' ) ) );
-				$html .= sprintf( '<h2 class="mai-post-preview-title">%s</h2>', esc_html( $data['title'] ) );
+				$html .= sprintf( '<h3 class="mai-post-preview-title">%s</h3>', esc_html( $data['title'] ) );
 				$html .= sprintf( '<p class="mai-post-preview-desc">%s</p>', esc_html( $data['desc'] ) );
 			$html .= '</div>';
 

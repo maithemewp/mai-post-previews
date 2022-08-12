@@ -108,7 +108,6 @@ class Mai_Post_Preview_Block {
 				'acf_block_version' => 2,
 				'render_callback'   => [ $this, 'do_preview' ],
 				'style'             => 'mai-post-previews',
-				'script'            => 'mai-post-previews',
 				'supports'          => [
 					'align'  => false,
 					'anchor' => false,
