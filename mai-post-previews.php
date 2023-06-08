@@ -13,6 +13,9 @@
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) exit;
 
+// Must be at the top of the file.
+use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
+
 /**
  * Main Mai_Post_Previews_Plugin Class.
  *
@@ -139,7 +142,7 @@ final class Mai_Post_Previews_Plugin {
 	 * @return  void
 	 */
 	public function hooks() {
-		add_action( 'plugins_loaded', [ $this, 'updater' ] );
+		add_action( 'plugins_loaded', [ $this, 'updater' ], 12 );
 		add_action( 'plugins_loaded', [ $this, 'run' ] );
 	}
 
@@ -155,33 +158,28 @@ final class Mai_Post_Previews_Plugin {
 	 * @return void
 	 */
 	public function updater() {
-		// Bail if current user cannot manage plugins.
-		if ( ! current_user_can( 'install_plugins' ) ) {
-			return;
-		}
-
 		// Bail if plugin updater is not loaded.
-		if ( ! class_exists( 'Puc_v4_Factory' ) ) {
+		if ( ! class_exists( 'YahnisElsts\PluginUpdateChecker\v5\PucFactory' ) ) {
 			return;
 		}
 
-		// // Setup the updater.
-		// $updater = Puc_v4_Factory::buildUpdateChecker( 'https://github.com/bizbudding/starter-plugin/', __FILE__, 'textdomain' );
+		// Setup the updater.
+		$updater = PucFactory::buildUpdateChecker( 'https://github.com/maithemewp/mai-post-previews/', __FILE__, 'mai-post-previews' );
 
-		// // Maybe set github api token.
-		// if ( defined( 'MAI_GITHUB_API_TOKEN' ) ) {
-		// 	$updater->setAuthentication( MAI_GITHUB_API_TOKEN );
-		// }
+		// Maybe set github api token.
+		if ( defined( 'MAI_GITHUB_API_TOKEN' ) ) {
+			$updater->setAuthentication( MAI_GITHUB_API_TOKEN );
+		}
 
-		// // Add icons for Dashboard > Updates screen.
-		// if ( function_exists( 'mai_get_updater_icons' ) && $icons = mai_get_updater_icons() ) {
-		// 	$updater->addResultFilter(
-		// 		function ( $info ) use ( $icons ) {
-		// 			$info->icons = $icons;
-		// 			return $info;
-		// 		}
-		// 	);
-		// }
+		// Add icons for Dashboard > Updates screen.
+		if ( function_exists( 'mai_get_updater_icons' ) && $icons = mai_get_updater_icons() ) {
+			$updater->addResultFilter(
+				function ( $info ) use ( $icons ) {
+					$info->icons = $icons;
+					return $info;
+				}
+			);
+		}
 	}
 
 	/**
