@@ -92,6 +92,9 @@ class Mai_Post_Preview_Data {
 	 * @return array
 	 */
 	function data_from_info( $info ) {
+		static $i = 0;
+
+		// Initial data.
 		$metas = $info->getMetas();
 
 		// Vars.
@@ -101,7 +104,7 @@ class Mai_Post_Preview_Data {
 		$desc  = $metas->str( 'og:description' );
 
 		// Fallbacks.
-		$url   = $url ?: $post_url;
+		$url   = $url ?: $this->get_fallback_url( $i );
 		$image = $image ?: $metas->get( 'twitter:image' );
 		$parts = parse_url( $url );
 		$host  = $parts['host'];
@@ -110,6 +113,8 @@ class Mai_Post_Preview_Data {
 		$desc  = $desc ?: $metas->get( 'twitter:description' );
 		$desc  = rtrim( $desc, '.' ) . '...';
 
+		$i++;
+
 		return [
 			'url'   => $url,
 			'image' => $image,
@@ -117,5 +122,18 @@ class Mai_Post_Preview_Data {
 			'title' => $title,
 			'desc'  => $desc,
 		];
+	}
+
+	/**
+	 * Gets fallback URL from field value(s).
+	 *
+	 * @since TBD
+	 *
+	 * @param int $i The index.
+	 *
+	 * @return string
+	 */
+	function get_fallback_url( $i ) {
+		return isset( $this->urls[ $i ] ) ? $this->urls[ $i ] : '';
 	}
 }
