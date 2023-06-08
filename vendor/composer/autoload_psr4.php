@@ -10,7 +10,6 @@ return array(
     'Psr\\Http\\Client\\' => array($vendorDir . '/psr/http-client/src'),
     'Nyholm\\Psr7\\' => array($vendorDir . '/nyholm/psr7/src'),
     'ML\\JsonLD\\' => array($vendorDir . '/ml/json-ld'),
-    'Http\\Message\\' => array($vendorDir . '/php-http/message-factory/src'),
     'HtmlParser\\' => array($vendorDir . '/oscarotero/html-parser/src'),
     'Embed\\' => array($vendorDir . '/embed/embed/src'),
     'Composer\\CaBundle\\' => array($vendorDir . '/composer/ca-bundle/src'),

@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b67efefba8c801d1281a6d5727710534",
+    "content-hash": "0906019fdf94f10327a3c83c3fa233e9",
     "packages": [
         {
             "name": "composer/ca-bundle",
-            "version": "1.3.3",
+            "version": "1.3.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/ca-bundle.git",
-                "reference": "30897edbfb15e784fe55587b4f73ceefd3c4d98c"
+                "reference": "90d087e988ff194065333d16bc5cf649872d9cdb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/ca-bundle/zipball/30897edbfb15e784fe55587b4f73ceefd3c4d98c",
-                "reference": "30897edbfb15e784fe55587b4f73ceefd3c4d98c",
+                "url": "https://api.github.com/repos/composer/ca-bundle/zipball/90d087e988ff194065333d16bc5cf649872d9cdb",
+                "reference": "90d087e988ff194065333d16bc5cf649872d9cdb",
                 "shasum": ""
             },
             "require": {
@@ -64,7 +64,7 @@
             "support": {
                 "irc": "irc://irc.freenode.org/composer",
                 "issues": "https://github.com/composer/ca-bundle/issues",
-                "source": "https://github.com/composer/ca-bundle/tree/1.3.3"
+                "source": "https://github.com/composer/ca-bundle/tree/1.3.6"
             },
             "funding": [
                 {
@@ -80,20 +80,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-07-20T07:14:26+00:00"
+            "time": "2023-06-06T12:02:59+00:00"
         },
         {
             "name": "embed/embed",
-            "version": "v4.4.4",
+            "version": "v4.4.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oscarotero/Embed.git",
-                "reference": "52c2d77f58672868346ae09b0fa1eecc818bdf42"
+                "reference": "49134080764018bc6b8a2488dd1c8cc2c47d15fc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oscarotero/Embed/zipball/52c2d77f58672868346ae09b0fa1eecc818bdf42",
-                "reference": "52c2d77f58672868346ae09b0fa1eecc818bdf42",
+                "url": "https://api.github.com/repos/oscarotero/Embed/zipball/49134080764018bc6b8a2488dd1c8cc2c47d15fc",
+                "reference": "49134080764018bc6b8a2488dd1c8cc2c47d15fc",
                 "shasum": ""
             },
             "require": {
@@ -107,7 +107,7 @@
                 "php": "^7.4|^8",
                 "psr/http-client": "^1.0",
                 "psr/http-factory": "^1.0",
-                "psr/http-message": "^1.0"
+                "psr/http-message": "^1.0|^2.0"
             },
             "require-dev": {
                 "brick/varexporter": "^0.3.1",
@@ -153,7 +153,7 @@
             "support": {
                 "email": "oom@oscarotero.com",
                 "issues": "https://github.com/oscarotero/Embed/issues",
-                "source": "https://github.com/oscarotero/Embed/tree/v4.4.4"
+                "source": "https://github.com/oscarotero/Embed/tree/v4.4.8"
             },
             "funding": [
                 {
@@ -169,7 +169,7 @@
                     "type": "patreon"
                 }
             ],
-            "time": "2022-04-13T18:22:11+00:00"
+            "time": "2023-05-22T18:48:30+00:00"
         },
         {
             "name": "ml/iri",
@@ -224,16 +224,16 @@
         },
         {
             "name": "ml/json-ld",
-            "version": "1.2.0",
+            "version": "1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lanthaler/JsonLD.git",
-                "reference": "c74a1aed5979ed1cfb1be35a55a305fd30e30b93"
+                "reference": "537e68e87a6bce23e57c575cd5dcac1f67ce25d8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lanthaler/JsonLD/zipball/c74a1aed5979ed1cfb1be35a55a305fd30e30b93",
-                "reference": "c74a1aed5979ed1cfb1be35a55a305fd30e30b93",
+                "url": "https://api.github.com/repos/lanthaler/JsonLD/zipball/537e68e87a6bce23e57c575cd5dcac1f67ce25d8",
+                "reference": "537e68e87a6bce23e57c575cd5dcac1f67ce25d8",
                 "shasum": ""
             },
             "require": {
@@ -271,44 +271,45 @@
             ],
             "support": {
                 "issues": "https://github.com/lanthaler/JsonLD/issues",
-                "source": "https://github.com/lanthaler/JsonLD/tree/1.2.0"
+                "source": "https://github.com/lanthaler/JsonLD/tree/1.2.1"
             },
-            "time": "2020-06-16T17:45:06+00:00"
+            "time": "2022-09-29T08:45:17+00:00"
         },
         {
             "name": "nyholm/psr7",
-            "version": "1.5.1",
+            "version": "1.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Nyholm/psr7.git",
-                "reference": "f734364e38a876a23be4d906a2a089e1315be18a"
+                "reference": "3cb4d163b58589e47b35103e8e5e6a6a475b47be"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Nyholm/psr7/zipball/f734364e38a876a23be4d906a2a089e1315be18a",
-                "reference": "f734364e38a876a23be4d906a2a089e1315be18a",
+                "url": "https://api.github.com/repos/Nyholm/psr7/zipball/3cb4d163b58589e47b35103e8e5e6a6a475b47be",
+                "reference": "3cb4d163b58589e47b35103e8e5e6a6a475b47be",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.1",
-                "php-http/message-factory": "^1.0",
+                "php": ">=7.2",
                 "psr/http-factory": "^1.0",
-                "psr/http-message": "^1.0"
+                "psr/http-message": "^1.1 || ^2.0"
             },
             "provide": {
+                "php-http/message-factory-implementation": "1.0",
                 "psr/http-factory-implementation": "1.0",
                 "psr/http-message-implementation": "1.0"
             },
             "require-dev": {
                 "http-interop/http-factory-tests": "^0.9",
+                "php-http/message-factory": "^1.0",
                 "php-http/psr7-integration-tests": "^1.0",
-                "phpunit/phpunit": "^7.5 || 8.5 || 9.4",
+                "phpunit/phpunit": "^7.5 || ^8.5 || ^9.4",
                 "symfony/error-handler": "^4.4"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.4-dev"
+                    "dev-master": "1.8-dev"
                 }
             },
             "autoload": {
@@ -338,7 +339,7 @@
             ],
             "support": {
                 "issues": "https://github.com/Nyholm/psr7/issues",
-                "source": "https://github.com/Nyholm/psr7/tree/1.5.1"
+                "source": "https://github.com/Nyholm/psr7/tree/1.8.0"
             },
             "funding": [
                 {
@@ -350,20 +351,20 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-06-22T07:13:36+00:00"
+            "time": "2023-05-02T11:26:24+00:00"
         },
         {
             "name": "oscarotero/html-parser",
-            "version": "v0.1.6",
+            "version": "v0.1.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oscarotero/html-parser.git",
-                "reference": "b61e92f634d0dc184339d24630a6968d3ac64ded"
+                "reference": "0c5b619bdc7ac061f06a667d913e2af708ee3231"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oscarotero/html-parser/zipball/b61e92f634d0dc184339d24630a6968d3ac64ded",
-                "reference": "b61e92f634d0dc184339d24630a6968d3ac64ded",
+                "url": "https://api.github.com/repos/oscarotero/html-parser/zipball/0c5b619bdc7ac061f06a667d913e2af708ee3231",
+                "reference": "0c5b619bdc7ac061f06a667d913e2af708ee3231",
                 "shasum": ""
             },
             "require": {
@@ -401,81 +402,27 @@
             "support": {
                 "email": "oom@oscarotero.com",
                 "issues": "https://github.com/oscarotero/html-parser/issues",
-                "source": "https://github.com/oscarotero/html-parser/tree/v0.1.6"
+                "source": "https://github.com/oscarotero/html-parser/tree/v0.1.7"
             },
-            "time": "2020-11-19T17:43:46+00:00"
-        },
-        {
-            "name": "php-http/message-factory",
-            "version": "v1.0.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/php-http/message-factory.git",
-                "reference": "a478cb11f66a6ac48d8954216cfed9aa06a501a1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/php-http/message-factory/zipball/a478cb11f66a6ac48d8954216cfed9aa06a501a1",
-                "reference": "a478cb11f66a6ac48d8954216cfed9aa06a501a1",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.4",
-                "psr/http-message": "^1.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Http\\Message\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Márk Sági-Kazár",
-                    "email": "mark.sagikazar@gmail.com"
-                }
-            ],
-            "description": "Factory interfaces for PSR-7 HTTP Message",
-            "homepage": "http://php-http.org",
-            "keywords": [
-                "factory",
-                "http",
-                "message",
-                "stream",
-                "uri"
-            ],
-            "support": {
-                "issues": "https://github.com/php-http/message-factory/issues",
-                "source": "https://github.com/php-http/message-factory/tree/master"
-            },
-            "time": "2015-12-19T14:08:53+00:00"
+            "time": "2022-12-17T09:48:58+00:00"
         },
         {
             "name": "psr/http-client",
-            "version": "1.0.1",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/http-client.git",
-                "reference": "2dfb5f6c5eff0e91e20e913f8c5452ed95b86621"
+                "reference": "0955afe48220520692d2d09f7ab7e0f93ffd6a31"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/http-client/zipball/2dfb5f6c5eff0e91e20e913f8c5452ed95b86621",
-                "reference": "2dfb5f6c5eff0e91e20e913f8c5452ed95b86621",
+                "url": "https://api.github.com/repos/php-fig/http-client/zipball/0955afe48220520692d2d09f7ab7e0f93ffd6a31",
+                "reference": "0955afe48220520692d2d09f7ab7e0f93ffd6a31",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.0 || ^8.0",
-                "psr/http-message": "^1.0"
+                "psr/http-message": "^1.0 || ^2.0"
             },
             "type": "library",
             "extra": {
@@ -495,7 +442,7 @@
             "authors": [
                 {
                     "name": "PHP-FIG",
-                    "homepage": "http://www.php-fig.org/"
+                    "homepage": "https://www.php-fig.org/"
                 }
             ],
             "description": "Common interface for HTTP clients",
@@ -507,27 +454,27 @@
                 "psr-18"
             ],
             "support": {
-                "source": "https://github.com/php-fig/http-client/tree/master"
+                "source": "https://github.com/php-fig/http-client/tree/1.0.2"
             },
-            "time": "2020-06-29T06:28:15+00:00"
+            "time": "2023-04-10T20:12:12+00:00"
         },
         {
             "name": "psr/http-factory",
-            "version": "1.0.1",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/http-factory.git",
-                "reference": "12ac7fcd07e5b077433f5f2bee95b3a771bf61be"
+                "reference": "e616d01114759c4c489f93b099585439f795fe35"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/http-factory/zipball/12ac7fcd07e5b077433f5f2bee95b3a771bf61be",
-                "reference": "12ac7fcd07e5b077433f5f2bee95b3a771bf61be",
+                "url": "https://api.github.com/repos/php-fig/http-factory/zipball/e616d01114759c4c489f93b099585439f795fe35",
+                "reference": "e616d01114759c4c489f93b099585439f795fe35",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.0.0",
-                "psr/http-message": "^1.0"
+                "psr/http-message": "^1.0 || ^2.0"
             },
             "type": "library",
             "extra": {
@@ -547,7 +494,7 @@
             "authors": [
                 {
                     "name": "PHP-FIG",
-                    "homepage": "http://www.php-fig.org/"
+                    "homepage": "https://www.php-fig.org/"
                 }
             ],
             "description": "Common interfaces for PSR-7 HTTP message factories",
@@ -562,31 +509,31 @@
                 "response"
             ],
             "support": {
-                "source": "https://github.com/php-fig/http-factory/tree/master"
+                "source": "https://github.com/php-fig/http-factory/tree/1.0.2"
             },
-            "time": "2019-04-30T12:38:16+00:00"
+            "time": "2023-04-10T20:10:41+00:00"
         },
         {
             "name": "psr/http-message",
-            "version": "1.0.1",
+            "version": "2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/http-message.git",
-                "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363"
+                "reference": "402d35bcb92c70c026d1a6a9883f06b2ead23d71"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/http-message/zipball/f6561bf28d520154e4b0ec72be95418abe6d9363",
-                "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363",
+                "url": "https://api.github.com/repos/php-fig/http-message/zipball/402d35bcb92c70c026d1a6a9883f06b2ead23d71",
+                "reference": "402d35bcb92c70c026d1a6a9883f06b2ead23d71",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.0"
+                "php": "^7.2 || ^8.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0.x-dev"
+                    "dev-master": "2.0.x-dev"
                 }
             },
             "autoload": {
@@ -601,7 +548,7 @@
             "authors": [
                 {
                     "name": "PHP-FIG",
-                    "homepage": "http://www.php-fig.org/"
+                    "homepage": "https://www.php-fig.org/"
                 }
             ],
             "description": "Common interface for HTTP messages",
@@ -615,32 +562,32 @@
                 "response"
             ],
             "support": {
-                "source": "https://github.com/php-fig/http-message/tree/master"
+                "source": "https://github.com/php-fig/http-message/tree/2.0"
             },
-            "time": "2016-08-06T14:39:51+00:00"
+            "time": "2023-04-04T09:54:51+00:00"
         },
         {
             "name": "yahnis-elsts/plugin-update-checker",
-            "version": "v4.13",
+            "version": "v5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/YahnisElsts/plugin-update-checker.git",
-                "reference": "6eb27a6911e0e0880d09e5b11f577d3f688f7da7"
+                "reference": "48b03e93c9c2587f9276dce00ce2b6d94c1190d2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/YahnisElsts/plugin-update-checker/zipball/6eb27a6911e0e0880d09e5b11f577d3f688f7da7",
-                "reference": "6eb27a6911e0e0880d09e5b11f577d3f688f7da7",
+                "url": "https://api.github.com/repos/YahnisElsts/plugin-update-checker/zipball/48b03e93c9c2587f9276dce00ce2b6d94c1190d2",
+                "reference": "48b03e93c9c2587f9276dce00ce2b6d94c1190d2",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
-                "php": ">=5.2.0"
+                "php": ">=5.6.20"
             },
             "type": "library",
             "autoload": {
                 "files": [
-                    "load-v4p13.php"
+                    "load-v5p1.php"
                 ]
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -651,7 +598,7 @@
                 {
                     "name": "Yahnis Elsts",
                     "email": "whiteshadow@w-shadow.com",
-                    "homepage": "http://w-shadow.com/",
+                    "homepage": "https://w-shadow.com/",
                     "role": "Developer"
                 }
             ],
@@ -665,9 +612,9 @@
             ],
             "support": {
                 "issues": "https://github.com/YahnisElsts/plugin-update-checker/issues",
-                "source": "https://github.com/YahnisElsts/plugin-update-checker/tree/v4.13"
+                "source": "https://github.com/YahnisElsts/plugin-update-checker/tree/v5.1"
             },
-            "time": "2022-07-29T12:36:25+00:00"
+            "time": "2023-05-20T11:55:43+00:00"
         }
     ],
     "packages-dev": [],

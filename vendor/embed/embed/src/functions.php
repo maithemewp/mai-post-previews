@@ -33,7 +33,7 @@ function html(string $tagName, array $attributes, string $content = null): strin
     }
 
     if ($tagName === 'img') {
-        return "${html} />";
+        return "$html />";
     }
 
     return "{$html}>{$content}</{$tagName}>";
@@ -131,4 +131,26 @@ function getDirectory(string $path, int $position): ?string
 {
     $dirs = explode('/', $path);
     return $dirs[$position + 1] ?? null;
+}
+
+/**
+ * Determine whether at least one of the supplied variables is empty.
+ *
+ * @param mixed ...$values The values to check.
+ *
+ * @return boolean
+ */
+function isEmpty(mixed ...$values): bool
+{
+    $skipValues = array(
+        'undefined',
+    );
+
+    foreach ($values as $value) {
+        if (empty($value) || in_array($value, $skipValues)) {
+            return true;
+        }
+    }
+
+    return false;
 }
