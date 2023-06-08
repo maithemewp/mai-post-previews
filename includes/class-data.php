@@ -127,7 +127,7 @@ class Mai_Post_Preview_Data {
 	/**
 	 * Gets fallback URL from field value(s).
 	 *
-	 * @since TBD
+	 * @since 0.1.1
 	 *
 	 * @param int $i The index.
 	 *
