@@ -58,6 +58,7 @@ class Mai_Post_Preview {
 		$html  = '';
 
 		if ( $for_ajax ) {
+			$data          = [];
 			$data['url']   = $this->url;
 			$data['image'] = '&nbsp;';
 			$data['host']  = '&nbsp;';
