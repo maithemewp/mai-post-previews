@@ -106,8 +106,8 @@ class Mai_Post_Preview_Data {
 		// Fallbacks.
 		$url   = $url ?: $this->get_fallback_url( $i );
 		$image = $image ?: $metas->get( 'twitter:image' );
-		$parts = parse_url( $url );
-		$host  = $parts['host'];
+		$parts = wp_parse_url( $url );
+		$host  = isset( $parts['host'] ) ? $parts['host'] : '';
 		$title = $title ?: $metas->get( 'twitter:title' );
 		$desc  = $desc ?: $metas->get( 'description' );
 		$desc  = $desc ?: $metas->get( 'twitter:description' );
