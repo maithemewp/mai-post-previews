@@ -104,10 +104,10 @@ class Mai_Post_Preview_Data {
 		$desc  = $metas->str( 'og:description' );
 
  		// Fallbacks.
-		$image = $image ?: $metas->get( 'twitter:image' );
-		$parts = wp_parse_url( $url );
-		$host  = isset( $parts['host'] ) ? $parts['host'] : '';
-		$title = $title ?: $metas->get( 'twitter:title' );
+		$image = $image ?: $metas->url( 'twitter:image' );
+		$host  = parse_url( $url, PHP_URL_HOST );
+		$host  = ltrim( $host, 'www.' );
+		$title = $title ?: $metas->str( 'twitter:title' );
 		$desc  = $desc ?: $metas->html( 'description' );
 		$desc  = $desc ?: $metas->html( 'twitter:description' );
 		$desc  = rtrim( $desc, '.' ) . '...';
