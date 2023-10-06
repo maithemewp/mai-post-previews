@@ -96,28 +96,13 @@ final class Mai_Post_Previews_Plugin {
 		}
 
 		// Plugin Folder Path.
-		if ( ! defined( 'MAI_POST_PREVIEWS_PLUGIN_DIR' ) ) {
-			define( 'MAI_POST_PREVIEWS_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
-		}
-
-		// Plugin Includes Path.
-		if ( ! defined( 'MAI_POST_PREVIEWS_INCLUDES_DIR' ) ) {
-			define( 'MAI_POST_PREVIEWS_INCLUDES_DIR', MAI_POST_PREVIEWS_PLUGIN_DIR . 'includes/' );
+		if ( ! defined( 'MAI_POST_PREVIEWS_DIR' ) ) {
+			define( 'MAI_POST_PREVIEWS_DIR', plugin_dir_path( __FILE__ ) );
 		}
 
 		// Plugin Folder URL.
-		if ( ! defined( 'MAI_POST_PREVIEWS_PLUGIN_URL' ) ) {
-			define( 'MAI_POST_PREVIEWS_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
-		}
-
-		// Plugin Root File.
-		if ( ! defined( 'MAI_POST_PREVIEWS_PLUGIN_FILE' ) ) {
-			define( 'MAI_POST_PREVIEWS_PLUGIN_FILE', __FILE__ );
-		}
-
-		// Plugin Base Name
-		if ( ! defined( 'MAI_POST_PREVIEWS_BASENAME' ) ) {
-			define( 'MAI_POST_PREVIEWS_BASENAME', dirname( plugin_basename( __FILE__ ) ) );
+		if ( ! defined( 'MAI_POST_PREVIEWS_URL' ) ) {
+			define( 'MAI_POST_PREVIEWS_URL', plugin_dir_url( __FILE__ ) );
 		}
 	}
 
@@ -132,7 +117,7 @@ final class Mai_Post_Previews_Plugin {
 		// Include vendor libraries.
 		require_once __DIR__ . '/vendor/autoload.php';
 		// Includes.
-		foreach ( glob( MAI_POST_PREVIEWS_INCLUDES_DIR . '*.php' ) as $file ) { include $file; }
+		foreach ( glob( MAI_POST_PREVIEWS_DIR . 'includes/*.php' ) as $file ) { include $file; }
 	}
 
 	/**
