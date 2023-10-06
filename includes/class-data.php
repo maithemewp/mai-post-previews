@@ -99,7 +99,8 @@ class Mai_Post_Preview_Data {
 
 		// Vars.
 		$url   = $this->get_url( $i );
-		$image = $info->image->__toString();
+		$image = $info->image;
+		$image = $image ? $image->__toString() : '';
 		$title = $metas->str( 'og:title' );
 		$desc  = $metas->str( 'og:description' );
 
