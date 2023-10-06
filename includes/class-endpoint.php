@@ -75,6 +75,7 @@ class Mai_Post_Preview_Endpoint {
 			);
 		}
 
+
 		$previews = [];
 		$data     = maipp_get_data( $urls );
 

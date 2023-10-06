@@ -124,6 +124,7 @@ function maipp_sanitize_urls( array $urls ) {
 	$urls = array_unique( $urls );
 	$urls = array_values( $urls );
 	sort( $urls );
+
 	return $urls;
 }
 

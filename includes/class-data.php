@@ -99,11 +99,12 @@ class Mai_Post_Preview_Data {
 
 		// Vars.
 		$url   = $this->get_url( $i );
-		$image = $metas->str( 'og:image' );
+		$image = $info->image->__toString();
 		$title = $metas->str( 'og:title' );
 		$desc  = $metas->str( 'og:description' );
 
  		// Fallbacks.
+		$image = $image ?: $metas->url( 'og:image' );
 		$image = $image ?: $metas->url( 'twitter:image' );
 		$host  = parse_url( $url, PHP_URL_HOST );
 		$host  = ltrim( $host, 'www.' );
