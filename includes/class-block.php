@@ -25,11 +25,9 @@ class Mai_Post_Preview_Block {
 	 * @return void
 	 */
 	function hooks() {
-		add_action( 'init',                        [ $this, 'register_styles' ] );
-		// add_action( 'enqueue_block_editor_assets', [ $this, 'enqueue_editor_style' ] );
-		add_filter( 'script_loader_tag',           [ $this, 'add_script_atts' ], 10, 3 );
-		add_action( 'acf/init',                    [ $this, 'register_block' ] );
-		add_action( 'acf/init',                    [ $this, 'register_field_group' ] );
+		add_action( 'init',     [ $this, 'register_styles' ] );
+		add_action( 'acf/init', [ $this, 'register_block' ] );
+		add_action( 'acf/init', [ $this, 'register_field_group' ] );
 	}
 
 	/**
@@ -40,10 +38,14 @@ class Mai_Post_Preview_Block {
 	 * @return void
 	 */
 	function register_styles() {
-		$suffix = maipp_get_suffix();
-		wp_register_style( 'mai-post-previews', MAI_POST_PREVIEWS_PLUGIN_URL . sprintf( 'assets/css/mai-post-previews%s.css', $suffix ), [], MAI_POST_PREVIEWS_VERSION . '.' . date( 'njYHi', filemtime( MAI_POST_PREVIEWS_PLUGIN_DIR . sprintf( 'assets/css/mai-post-previews%s.css', $suffix ) ) ) );
-		wp_register_style( 'mai-post-previews-loading', MAI_POST_PREVIEWS_PLUGIN_URL . sprintf( 'assets/css/mai-post-previews-loading%s.css', $suffix ), [], MAI_POST_PREVIEWS_VERSION . '.' . date( 'njYHi', filemtime( MAI_POST_PREVIEWS_PLUGIN_DIR . sprintf( 'assets/css/mai-post-previews-loading%s.css', $suffix ) ) ) );
-		wp_register_script( 'mai-post-previews', MAI_POST_PREVIEWS_PLUGIN_URL . sprintf( 'assets/js/mai-post-previews%s.js', $suffix ), [], MAI_POST_PREVIEWS_VERSION . '.' . date( 'njYHi', filemtime( MAI_POST_PREVIEWS_PLUGIN_DIR . sprintf( 'assets/js/mai-post-previews%s.js', $suffix ) ) ), true );
+		$suffix           = maipp_get_suffix();
+		$file_previews    = "assets/css/mai-post-previews{$suffix}.css";
+		$file_loading     = "assets/css/mai-post-previews-loading{$suffix}.css";
+		$file_previews_js = "assets/js/mai-post-previews{$suffix}.js";
+
+		wp_register_style( 'mai-post-previews', $this->get_file_data( $file_previews, 'url' ), [], $this->get_file_data( $file_previews, 'version' ) );
+		wp_register_style( 'mai-post-previews-loading', $this->get_file_data( $file_loading, 'url' ), [], $this->get_file_data( $file_loading, 'version' ) );
+		wp_register_script( 'mai-post-previews', $this->get_file_data( $file_previews_js, 'url' ), [], $this->get_file_data( $file_previews_js, 'version' ), [ 'strategy' => 'async' ] );
 		wp_localize_script( 'mai-post-previews', 'maippScriptVars',
 			[
 				'root'  => esc_url_raw( rest_url() ),
@@ -53,35 +55,40 @@ class Mai_Post_Preview_Block {
 	}
 
 	/**
-	 * Enqueues editor styles.
+	 * Gets file data.
 	 *
-	 * @since 0.1.0
+	 * @since TBD
 	 *
-	 * @return void
+	 * @param string $file The file path name.
+	 * @param string $key The specific key to return
+	 *
+	 * @return array|string
 	 */
-	function enqueue_editor_style() {
-		wp_enqueue_style( 'mai-post-previews' );
-	}
+	function get_file_data( $file, $key = '' ) {
+		static $cache = null;
 
-	/**
-	 * Adds attributes to scripts.
-	 *
-	 * @since 0.1.0
-	 *
-	 * @param string $tag    The <script> tag for the enqueued script.
-	 * @param string $handle The script's registered handle.
-	 * @param string $src    The script's source URL.
-	 *
-	 * @return string
-	 */
-	function add_script_atts( $tag, $handle, $src ) {
-		if ( 'mai-post-previews' !== $handle ) {
-			return $tag;
+		if ( ! is_null( $cache ) && isset( $cache[ $file ] ) ) {
+			if ( $key ) {
+				return $cache[ $file ][ $key ];
+			}
+
+			return $cache[ $file ];
 		}
 
-		$tag = str_replace( ' src', ' async src', $tag );
+		$file_path      = MAI_POST_PREVIEWS_DIR . $file;
+		$file_url       = MAI_POST_PREVIEWS_URL . $file;
+		$version        = MAI_POST_PREVIEWS_VERSION . '.' . date( 'njYHi', filemtime( $file_path ) );
+		$cache[ $file ] = [
+			'path'    => $file_path,
+			'url'     => $file_url,
+			'version' => $version,
+		];
 
-		return $tag;
+		if ( $key ) {
+			return $cache[ $file ][ $key ];
+		}
+
+		return $cache[ $file ];
 	}
 
 	/**
@@ -133,6 +140,7 @@ class Mai_Post_Preview_Block {
 	 */
 	function do_preview( $block, $content = '', $is_preview = false ) {
 		$url = get_field( 'url' );
+
 		echo maipp_get_preview( $url, $is_preview );
 	}
 
