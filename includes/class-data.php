@@ -98,19 +98,18 @@ class Mai_Post_Preview_Data {
 		$metas = $info->getMetas();
 
 		// Vars.
-		$url   = $metas->str( 'og:url' );
+		$url   = $this->get_url( $i );
 		$image = $metas->str( 'og:image' );
 		$title = $metas->str( 'og:title' );
 		$desc  = $metas->str( 'og:description' );
 
-		// Fallbacks.
-		$url   = $url ?: $this->get_fallback_url( $i );
+ 		// Fallbacks.
 		$image = $image ?: $metas->get( 'twitter:image' );
 		$parts = wp_parse_url( $url );
 		$host  = isset( $parts['host'] ) ? $parts['host'] : '';
 		$title = $title ?: $metas->get( 'twitter:title' );
-		$desc  = $desc ?: $metas->get( 'description' );
-		$desc  = $desc ?: $metas->get( 'twitter:description' );
+		$desc  = $desc ?: $metas->html( 'description' );
+		$desc  = $desc ?: $metas->html( 'twitter:description' );
 		$desc  = rtrim( $desc, '.' ) . '...';
 
 		$i++;
@@ -133,7 +132,7 @@ class Mai_Post_Preview_Data {
 	 *
 	 * @return string
 	 */
-	function get_fallback_url( $i ) {
+	function get_url( $i ) {
 		return isset( $this->urls[ $i ] ) ? $this->urls[ $i ] : '';
 	}
 }
