@@ -57,7 +57,7 @@ class Mai_Post_Preview_Block {
 	/**
 	 * Gets file data.
 	 *
-	 * @since TBD
+	 * @since 0.2.0
 	 *
 	 * @param string $file The file path name.
 	 * @param string $key The specific key to return
