@@ -2,6 +2,7 @@
 
 ## 0.2.1 (11/27/23)
 * Changed: Update the updater.
+* Fixed: Image fallback sometimes not getting correct string.
 
 ## 0.2.0 (10/6/23)
 * Fixed: URL and description sometimes causing errors when fetching meta from url.
