@@ -107,7 +107,7 @@ class Mai_Post_Preview_Data {
  		// Fallbacks.
 		$image = $image ?: $metas->url( 'og:image' );
 		$image = $image ?: $metas->url( 'twitter:image' );
-		$host  = parse_url( $url, PHP_URL_HOST );
+		$host  = (string) parse_url( $url, PHP_URL_HOST );
 		$host  = ltrim( $host, 'www.' );
 		$title = $title ?: $metas->str( 'twitter:title' );
 		$desc  = $desc ?: $metas->html( 'description' );

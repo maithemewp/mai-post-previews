@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.2.2 (11/29/23)
+* Added: PHP 8.2 compatibility.
+
 ## 0.2.1 (11/27/23)
 * Changed: Update the updater.
 * Fixed: Image fallback sometimes not getting correct string.

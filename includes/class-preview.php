@@ -10,6 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
  */
 class Mai_Post_Preview {
 	protected $url;
+	protected $is_preview;
 
 	/**
 	 * Constructs the class.
