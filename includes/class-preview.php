@@ -83,8 +83,13 @@ class Mai_Post_Preview {
 				$html .= sprintf( '<p class="mai-post-preview-desc">%s</p>', esc_html( $data['desc'] ) );
 			$html .= '</div>';
 
+			// If not for ajax.
 			if ( ! $for_ajax ) {
-				$html .= sprintf( '<a target="_blank" rel="noopener noreferrer" class="mai-post-preview-link" href="%s"><span class="screen-reader-text">%s</span></a>', esc_url( (string) $data['url'] ), esc_html( $data['title'] ) );
+				// Open in new tab if not the same host.
+				$target = $data['host'] !== parse_url( home_url(), PHP_URL_HOST ) ? ' target="_blank"' : '';
+
+				// Add link.
+				$html .= sprintf( '<a rel="noopener noreferrer" class="mai-post-preview-link" href="%s"%s><span class="screen-reader-text">%s</span></a>', esc_url( (string) $data['url'] ), esc_attr( $target ), esc_html( $data['title'] ) );
 			}
 		$html .= '</div>';
 
