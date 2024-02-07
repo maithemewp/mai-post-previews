@@ -58,6 +58,7 @@ class Mai_Post_Preview {
 		// Build HTML.
 		$html  = '';
 
+		// If for ajax.
 		if ( $for_ajax ) {
 			$data          = [];
 			$data['url']   = $this->url;
@@ -67,20 +68,23 @@ class Mai_Post_Preview {
 			$data['desc']  = '&nbsp;';
 
 			$html .= sprintf( '<div class="%s" data-url="%s">', $class, $data['url'] );
-			$html .= sprintf( '<div class="mai-post-preview-figure"></div>', esc_url( $data['image'] ) );
-		} else {
+			$html .= sprintf( '<div class="mai-post-preview-figure"></div>', esc_url( (string) $data['image'] ) );
+		}
+		// No ajax.
+		else {
 			$html .= sprintf( '<div class="%s">', $class );
-			$html .= sprintf( '<figure class="mai-post-preview-figure"><img class="mai-post-preview-image" src="%s" alt="%s" width="266" height="354" /></figure>', esc_url( $data['image'] ), esc_attr( $data['title'] ) );
+			$html .= sprintf( '<figure class="mai-post-preview-figure"><img class="mai-post-preview-image" src="%s" alt="%s" width="266" height="354" /></figure>', esc_url( (string) $data['image'] ), esc_attr( $data['title'] ) );
 		}
 
+			// Build inner HTML.
 			$html .= '<div class="mai-post-preview-inner">';
-				$html .= sprintf( '<p class="mai-post-preview-domain">%s</p>', esc_html( ltrim( $data['host'], 'www.' ) ) );
+				$html .= sprintf( '<p class="mai-post-preview-domain">%s</p>', esc_html( ltrim( (string) $data['host'], 'www.' ) ) );
 				$html .= sprintf( '<h3 class="mai-post-preview-title">%s</h3>', esc_html( $data['title'] ) );
 				$html .= sprintf( '<p class="mai-post-preview-desc">%s</p>', esc_html( $data['desc'] ) );
 			$html .= '</div>';
 
 			if ( ! $for_ajax ) {
-				$html .= sprintf( '<a target="_blank" rel="noopener noreferrer" class="mai-post-preview-link" href="%s"><span class="screen-reader-text">%s</span></a>', esc_url( $data['url'] ), esc_html( $data['title'] ) );
+				$html .= sprintf( '<a target="_blank" rel="noopener noreferrer" class="mai-post-preview-link" href="%s"><span class="screen-reader-text">%s</span></a>', esc_url( (string) $data['url'] ), esc_html( $data['title'] ) );
 			}
 		$html .= '</div>';
 

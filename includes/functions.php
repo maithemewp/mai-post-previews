@@ -138,5 +138,5 @@ function maipp_sanitize_urls( array $urls ) {
  * @return array
  */
 function maipp_sanitize_url( $url ) {
-	return trailingslashit( esc_url( $url ) );
+	return trailingslashit( esc_url( (string) $url ) );
 }

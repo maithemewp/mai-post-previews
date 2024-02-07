@@ -108,11 +108,11 @@ class Mai_Post_Preview_Data {
 		$image = $image ?: $metas->url( 'og:image' );
 		$image = $image ?: $metas->url( 'twitter:image' );
 		$host  = (string) parse_url( $url, PHP_URL_HOST );
-		$host  = ltrim( $host, 'www.' );
+		$host  = ltrim( (string) $host, 'www.' );
 		$title = $title ?: $metas->str( 'twitter:title' );
 		$desc  = $desc ?: $metas->html( 'description' );
 		$desc  = $desc ?: $metas->html( 'twitter:description' );
-		$desc  = rtrim( $desc, '.' ) . '...';
+		$desc  = rtrim( (string) $desc, '.' ) . '...';
 
 		$i++;
 
