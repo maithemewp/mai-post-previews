@@ -189,7 +189,7 @@ class Mai_Post_Preview_Block {
 	/**
 	 * Adds CSS before the field.
 	 *
-	 * @since TBD
+	 * @since 0.3.0
 	 *
 	 * @param array $field
 	 *

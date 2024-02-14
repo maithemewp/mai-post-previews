@@ -7,7 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
  * Gets a preview.
  *
  * @since 0.1.0
- * @since TBD Moved to array of args.
+ * @since 0.3.0 Moved to array of args.
  *
  * @param array $args The args.
  *
