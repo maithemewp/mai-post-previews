@@ -7,14 +7,14 @@ if ( ! defined( 'ABSPATH' ) ) exit;
  * Gets a preview.
  *
  * @since 0.1.0
+ * @since TBD Moved to array of args.
  *
- * @param string $url        The post url.
- * @param bool   $is_preview If in the admin editor.
+ * @param array $args The args.
  *
  * @return string
  */
-function maipp_get_preview( $url, $is_preview = false ) {
-	$preview = new Mai_Post_Preview( $url, $is_preview );
+function maipp_get_preview( $args ) {
+	$preview = new Mai_Post_Preview( $args );
 	return $preview->get();
 }
 
@@ -23,7 +23,7 @@ function maipp_get_preview( $url, $is_preview = false ) {
  *
  * @since 0.1.0
  *
- * @param array|string $urls The url or urls to check asynchronously.
+ * @param string|array $urls The url or urls to check asynchronously.
  *
  * @return array
  */

@@ -50,8 +50,23 @@
 	text-transform: uppercase;
 }
 
+.mai-post-preview-title {
+	/* Required declarations. */
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	/* Limit the text block to n lines. */
+	-webkit-line-clamp: 2;
+}
+
 .mai-post-preview-desc {
 	font-size:var(--font-size-sm);
+	/* Required declarations. */
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	/* Limit the text block to n lines. */
+	-webkit-line-clamp: 4;
 }
 
 .mai-post-preview-link {

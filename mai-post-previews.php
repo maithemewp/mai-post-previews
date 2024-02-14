@@ -116,8 +116,13 @@ final class Mai_Post_Previews_Plugin {
 	private function includes() {
 		// Include vendor libraries.
 		require_once __DIR__ . '/vendor/autoload.php';
+
 		// Includes.
 		foreach ( glob( MAI_POST_PREVIEWS_DIR . 'includes/*.php' ) as $file ) { include $file; }
+		foreach ( glob( MAI_POST_PREVIEWS_DIR . 'classes/*.php' ) as $file ) { include $file; }
+
+		// Blocks.
+		include_once MAI_POST_PREVIEWS_DIR . 'blocks/post-preview/block.php';
 	}
 
 	/**
@@ -127,7 +132,7 @@ final class Mai_Post_Previews_Plugin {
 	 * @return  void
 	 */
 	public function hooks() {
-		add_action( 'plugins_loaded', [ $this, 'updater' ], 12 );
+		add_action( 'plugins_loaded', [ $this, 'updater' ] );
 		add_action( 'plugins_loaded', [ $this, 'run' ] );
 	}
 
