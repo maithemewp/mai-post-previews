@@ -4,7 +4,7 @@
  * Plugin Name:     Mai Post Previews
  * Plugin URI:      https://bizbudding.com
  * Description:     Show a preview embed of external posts via meta data.
- * Version:         0.2.2
+ * Version:         0.3.0
  *
  * Author:          BizBudding, Mike Hemberger
  * Author URI:      https://bizbudding.com
@@ -92,7 +92,7 @@ final class Mai_Post_Previews_Plugin {
 	private function setup_constants() {
 		// Plugin version.
 		if ( ! defined( 'MAI_POST_PREVIEWS_VERSION' ) ) {
-			define( 'MAI_POST_PREVIEWS_VERSION', '0.2.2' );
+			define( 'MAI_POST_PREVIEWS_VERSION', '0.3.0' );
 		}
 
 		// Plugin Folder Path.
@@ -116,8 +116,13 @@ final class Mai_Post_Previews_Plugin {
 	private function includes() {
 		// Include vendor libraries.
 		require_once __DIR__ . '/vendor/autoload.php';
+
 		// Includes.
 		foreach ( glob( MAI_POST_PREVIEWS_DIR . 'includes/*.php' ) as $file ) { include $file; }
+		foreach ( glob( MAI_POST_PREVIEWS_DIR . 'classes/*.php' ) as $file ) { include $file; }
+
+		// Blocks.
+		include_once MAI_POST_PREVIEWS_DIR . 'blocks/post-preview/block.php';
 	}
 
 	/**
@@ -127,7 +132,7 @@ final class Mai_Post_Previews_Plugin {
 	 * @return  void
 	 */
 	public function hooks() {
-		add_action( 'plugins_loaded', [ $this, 'updater' ], 12 );
+		add_action( 'plugins_loaded', [ $this, 'updater' ] );
 		add_action( 'plugins_loaded', [ $this, 'run' ] );
 	}
 

@@ -1,0 +1,25 @@
+{
+	"name": "acf/mai-post-preview",
+	"title": "Mai Post Preview",
+	"description": "Preview a post with image, title, description, and link.",
+	"category": "widgets",
+	"keywords": [ "embed", "post", "preview" ],
+	"icon": "embed-post",
+	"textdomain": "mai-locations",
+	"editorStyle": "file:./../../assets/css/mai-post-previews.min.css",
+	"acf": {
+		"mode": "preview"
+	},
+	"supports": {
+		"align": false,
+		"anchor": false
+	},
+	"example": {
+		"attributes": {
+			"mode": "preview",
+			"data": {
+				"url": "https://bizbudding.com/mai-theme/"
+			}
+		}
+	}
+}

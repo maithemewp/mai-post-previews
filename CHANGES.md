@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.3.0 (TBD)
+* Added: New settings for `rel` attributes `nofollow`, `noreferrer`, and `sponsored`.
+* Added: Better error handling and fallbacks for blocked, broken, etc. urls.
+* Changed: Links no longer open in a new window if the link is on the same domain.
+* Changed: Update embed package.
+* Changed: Better file structure and now registering block via block.json.
+* Changed: Update the updater and other dependencies.
+* Fixed: No longer passing `null` to `ltrim()` and `rtrim()` (forcing string) for more PHP 8 compatibility.
+
 ## 0.2.2 (11/29/23)
 * Added: PHP 8.2 compatibility.
 
