@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.3.0 (TBD)
+## 0.3.0 (7/19/24)
 * Added: New settings for `rel` attributes `nofollow`, `noreferrer`, and `sponsored`.
 * Added: Better error handling and fallbacks for blocked, broken, etc. urls.
 * Changed: Links no longer open in a new window if the link is on the same domain.
