@@ -2,31 +2,31 @@
     "packages": [
         {
             "name": "composer/ca-bundle",
-            "version": "1.4.0",
-            "version_normalized": "1.4.0.0",
+            "version": "1.5.1",
+            "version_normalized": "1.5.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/ca-bundle.git",
-                "reference": "b66d11b7479109ab547f9405b97205640b17d385"
+                "reference": "063d9aa8696582f5a41dffbbaf3c81024f0a604a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/ca-bundle/zipball/b66d11b7479109ab547f9405b97205640b17d385",
-                "reference": "b66d11b7479109ab547f9405b97205640b17d385",
+                "url": "https://api.github.com/repos/composer/ca-bundle/zipball/063d9aa8696582f5a41dffbbaf3c81024f0a604a",
+                "reference": "063d9aa8696582f5a41dffbbaf3c81024f0a604a",
                 "shasum": ""
             },
             "require": {
                 "ext-openssl": "*",
                 "ext-pcre": "*",
-                "php": "^5.3.2 || ^7.0 || ^8.0"
+                "php": "^7.2 || ^8.0"
             },
             "require-dev": {
-                "phpstan/phpstan": "^0.12.55",
-                "psr/log": "^1.0",
+                "phpstan/phpstan": "^1.10",
+                "psr/log": "^1.0 || ^2.0 || ^3.0",
                 "symfony/phpunit-bridge": "^4.2 || ^5",
-                "symfony/process": "^2.5 || ^3.0 || ^4.0 || ^5.0 || ^6.0 || ^7.0"
+                "symfony/process": "^4.0 || ^5.0 || ^6.0 || ^7.0"
             },
-            "time": "2023-12-18T12:05:55+00:00",
+            "time": "2024-07-08T15:28:20+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -61,7 +61,7 @@
             "support": {
                 "irc": "irc://irc.freenode.org/composer",
                 "issues": "https://github.com/composer/ca-bundle/issues",
-                "source": "https://github.com/composer/ca-bundle/tree/1.4.0"
+                "source": "https://github.com/composer/ca-bundle/tree/1.5.1"
             },
             "funding": [
                 {
@@ -81,17 +81,17 @@
         },
         {
             "name": "embed/embed",
-            "version": "v4.4.10",
-            "version_normalized": "4.4.10.0",
+            "version": "v4.4.11",
+            "version_normalized": "4.4.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oscarotero/Embed.git",
-                "reference": "8ac21505d048e8796c6cb9172ec5e81e5d0e0408"
+                "reference": "09a60be4f14fc60d063a8dba22594f7b43765958"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oscarotero/Embed/zipball/8ac21505d048e8796c6cb9172ec5e81e5d0e0408",
-                "reference": "8ac21505d048e8796c6cb9172ec5e81e5d0e0408",
+                "url": "https://api.github.com/repos/oscarotero/Embed/zipball/09a60be4f14fc60d063a8dba22594f7b43765958",
+                "reference": "09a60be4f14fc60d063a8dba22594f7b43765958",
                 "shasum": ""
             },
             "require": {
@@ -118,7 +118,7 @@
             "suggest": {
                 "symfony/css-selector": "If you want to get elements using css selectors"
             },
-            "time": "2023-12-10T12:30:47+00:00",
+            "time": "2024-06-10T16:01:33+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -153,7 +153,7 @@
             "support": {
                 "email": "oom@oscarotero.com",
                 "issues": "https://github.com/oscarotero/Embed/issues",
-                "source": "https://github.com/oscarotero/Embed/tree/v4.4.10"
+                "source": "https://github.com/oscarotero/Embed/tree/v4.4.11"
             },
             "funding": [
                 {
@@ -475,24 +475,24 @@
         },
         {
             "name": "psr/http-factory",
-            "version": "1.0.2",
-            "version_normalized": "1.0.2.0",
+            "version": "1.1.0",
+            "version_normalized": "1.1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/http-factory.git",
-                "reference": "e616d01114759c4c489f93b099585439f795fe35"
+                "reference": "2b4765fddfe3b508ac62f829e852b1501d3f6e8a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/http-factory/zipball/e616d01114759c4c489f93b099585439f795fe35",
-                "reference": "e616d01114759c4c489f93b099585439f795fe35",
+                "url": "https://api.github.com/repos/php-fig/http-factory/zipball/2b4765fddfe3b508ac62f829e852b1501d3f6e8a",
+                "reference": "2b4765fddfe3b508ac62f829e852b1501d3f6e8a",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.0.0",
+                "php": ">=7.1",
                 "psr/http-message": "^1.0 || ^2.0"
             },
-            "time": "2023-04-10T20:10:41+00:00",
+            "time": "2024-04-15T12:06:14+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -515,7 +515,7 @@
                     "homepage": "https://www.php-fig.org/"
                 }
             ],
-            "description": "Common interfaces for PSR-7 HTTP message factories",
+            "description": "PSR-17: Common interfaces for PSR-7 HTTP message factories",
             "keywords": [
                 "factory",
                 "http",
@@ -527,7 +527,7 @@
                 "response"
             ],
             "support": {
-                "source": "https://github.com/php-fig/http-factory/tree/1.0.2"
+                "source": "https://github.com/php-fig/http-factory"
             },
             "install-path": "../psr/http-factory"
         },
@@ -589,29 +589,29 @@
         },
         {
             "name": "yahnis-elsts/plugin-update-checker",
-            "version": "v5.3",
-            "version_normalized": "5.3.0.0",
+            "version": "v5.4",
+            "version_normalized": "5.4.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/YahnisElsts/plugin-update-checker.git",
-                "reference": "0b6bd7cd3286688ab680201aa6a7d8572c51ae1f"
+                "reference": "e8e53e6d98e37fa7c895c93417f52e3775494715"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/YahnisElsts/plugin-update-checker/zipball/0b6bd7cd3286688ab680201aa6a7d8572c51ae1f",
-                "reference": "0b6bd7cd3286688ab680201aa6a7d8572c51ae1f",
+                "url": "https://api.github.com/repos/YahnisElsts/plugin-update-checker/zipball/e8e53e6d98e37fa7c895c93417f52e3775494715",
+                "reference": "e8e53e6d98e37fa7c895c93417f52e3775494715",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
                 "php": ">=5.6.20"
             },
-            "time": "2023-11-09T08:34:00+00:00",
+            "time": "2024-02-24T09:56:49+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
                 "files": [
-                    "load-v5p3.php"
+                    "load-v5p4.php"
                 ]
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -636,7 +636,7 @@
             ],
             "support": {
                 "issues": "https://github.com/YahnisElsts/plugin-update-checker/issues",
-                "source": "https://github.com/YahnisElsts/plugin-update-checker/tree/v5.3"
+                "source": "https://github.com/YahnisElsts/plugin-update-checker/tree/v5.4"
             },
             "install-path": "../yahnis-elsts/plugin-update-checker"
         }
