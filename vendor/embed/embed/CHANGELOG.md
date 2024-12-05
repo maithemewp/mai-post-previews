@@ -4,6 +4,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [4.4.14] - 2024-12-04
+### Fixed
+- Php 8.4 support [#551].
+
+## [4.4.13] - 2024-11-21
+### Fixed
+- Php 8.4 support [#548].
+
+## [4.4.12] - 2024-07-24
+### Fixed
+- X.com (Twitter) [#540]
+- Updated oembed resources.
+
 ## [4.4.11] - 2024-06-10
 ### Fixed
 - Updated oEmbed entry points [#537]
@@ -233,7 +246,13 @@ Full library refactoring.
 [#527]: https://github.com/oscarotero/Embed/issues/527
 [#529]: https://github.com/oscarotero/Embed/issues/529
 [#537]: https://github.com/oscarotero/Embed/issues/537
+[#540]: https://github.com/oscarotero/Embed/issues/540
+[#548]: https://github.com/oscarotero/Embed/issues/548
+[#551]: https://github.com/oscarotero/Embed/issues/551
 
+[4.4.14]: https://github.com/oscarotero/Embed/compare/v4.4.13...v4.4.14
+[4.4.13]: https://github.com/oscarotero/Embed/compare/v4.4.12...v4.4.13
+[4.4.12]: https://github.com/oscarotero/Embed/compare/v4.4.11...v4.4.12
 [4.4.11]: https://github.com/oscarotero/Embed/compare/v4.4.10...v4.4.11
 [4.4.10]: https://github.com/oscarotero/Embed/compare/v4.4.9...v4.4.10
 [4.4.9]: https://github.com/oscarotero/Embed/compare/v4.4.8...v4.4.9
