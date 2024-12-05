@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.3.1 (12/5/24)
+* Changed: Update the updater.
+
 ## 0.3.0 (7/19/24)
 * Added: New settings for `rel` attributes `nofollow`, `noreferrer`, and `sponsored`.
 * Added: Better error handling and fallbacks for blocked, broken, etc. urls.
