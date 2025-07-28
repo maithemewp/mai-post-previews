@@ -44,6 +44,17 @@ class Mai_Post_Preview {
 		if ( $this->args['preview'] ) {
 			$class .= ' mai-post-preview-editor';
 			$data   = maipp_get_data( $this->args['url'] );
+
+			// Check if data retrieval failed.
+			if ( is_wp_error( $data ) ) {
+				$data = [
+					'url'   => $this->args['url'],
+					'image' => '',
+					'host'  => parse_url( $this->args['url'], PHP_URL_HOST ),
+					'title' => __( 'Error', 'mai-post-previews' ),
+					'desc'  => $data->get_error_message(),
+				];
+			}
 		}
 		// Front end only checks transient, if no data we'll prepare for ajax.
 		else {

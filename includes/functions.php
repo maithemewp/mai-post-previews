@@ -25,11 +25,22 @@ function maipp_get_preview( $args ) {
  *
  * @param string|array $urls The url or urls to check asynchronously.
  *
- * @return array
+ * @return array|WP_Error
  */
 function maipp_get_data( $urls ) {
-	$data = new Mai_Post_Preview_Data( $urls );
-	return $data->get_data();
+	try {
+		$data = new Mai_Post_Preview_Data( $urls );
+		$result = $data->get_data();
+
+		if ( is_wp_error( $result ) ) {
+			return $result;
+		}
+
+		return $result;
+
+	} catch ( Exception $e ) {
+		return new WP_Error( 'data_fetch_failed', $e->getMessage() );
+	}
 }
 
 /**
