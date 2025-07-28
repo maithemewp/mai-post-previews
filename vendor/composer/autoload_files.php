@@ -7,5 +7,5 @@ $baseDir = dirname($vendorDir);
 
 return array(
     '09fc349b549513bf7f4291502426f919' => $vendorDir . '/embed/embed/src/functions.php',
-    '256558b1ddf2fa4366ea7d7602798dd1' => $vendorDir . '/yahnis-elsts/plugin-update-checker/load-v5p5.php',
+    'f6d4f6bcee7247df6b777884c3e22f98' => $vendorDir . '/yahnis-elsts/plugin-update-checker/load-v5p6.php',
 );
