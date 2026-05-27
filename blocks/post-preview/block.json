@@ -1,4 +1,5 @@
 {
+	"apiVersion": 3,
 	"name": "acf/mai-post-preview",
 	"title": "Mai Post Preview",
 	"description": "Preview a post with image, title, description, and link.",
