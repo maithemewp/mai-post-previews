@@ -5,6 +5,7 @@
  * Plugin URI:      https://bizbudding.com
  * Description:     Show a preview embed of external posts via meta data.
  * Version:         0.4.0-beta.1
+ * Requires PHP:    8.1
  *
  * Author:          BizBudding, Mike Hemberger
  * Author URI:      https://bizbudding.com
